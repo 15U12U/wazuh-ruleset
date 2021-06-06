@@ -1,11 +1,59 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [v3.13.0] 
+## [v4.1.0]
+
+### Added
+
+- Let the Ruleset update tool to bypass the version check with the force option. ([#773](https://github.com/wazuh/wazuh-ruleset/pull/773))
+- Added new AWS Config-History rules to make it more granular by including every item status supported. ([#775](https://github.com/wazuh/wazuh-ruleset/pull/775))
+
+### Changed
+
+- FIM rules have been adapted to the improvements for Windows Registry monitoring. ([#768](https://github.com/wazuh/wazuh-ruleset/pull/768))
+
+### Fixed
+
+- Updated MITRE techniques in web rules. ([#810](https://github.com/wazuh/wazuh-ruleset/pull/810))
+- Fixed Sonicwall predecoder to accept whitespaces at the beginning. ([#503](https://github.com/wazuh/wazuh-ruleset/pull/503))
+
+
+## [v4.0.1]
+
+### Fixed
+
+- Removed duplicated Windows rules for EventChannel. ([#771](https://github.com/wazuh/wazuh-ruleset/pull/771))
+
+
+## [v4.0.0]
+
+### Changed
+
+- Changed compliance rules groups and removed `alert_by_email` option by default. ([#559](https://github.com/wazuh/wazuh-ruleset/pull/559))
+- Let the Ruleset update tool pick up the current version branch by default. ([#753](https://github.com/wazuh/wazuh-ruleset/pull/753))
+
+
+## [v3.13.0]
 
 ### Added
 
 - Added rules and decoders for macOS sshd logs ([#593](https://github.com/wazuh/wazuh-ruleset/pull/593))
+- Added TSC/SOC compliance mapping ([#613](https://github.com/wazuh/wazuh-ruleset/pull/613))
+- Added rules and decoders for PaloAlto logs ([#658](https://github.com/wazuh/wazuh-ruleset/pull/658))
+- Added rules and decoder to monitor the FIM database status. ([#4717](https://github.com/wazuh/wazuh/pull/4717))
+- Added rules for WAF. ([#687](https://github.com/wazuh/wazuh-ruleset/pull/687))
+
+### Changed
+
+- Changed description of Vulnerability Detector rules ([#638](https://github.com/wazuh/wazuh-ruleset/pull/638))
+- Changed squid decoders ([#672](https://github.com/wazuh/wazuh-ruleset/pull/672))
+
+### Fixed
+
+- Fix the provider name so that Windows Eventlog logs match with the Wazuh rules. ([#662](https://github.com/wazuh/wazuh-ruleset/pull/662))
+- Fixed static filters related to the system_name field. ([#684](https://github.com/wazuh/wazuh-ruleset/pull/684))
+- Remove trailing whitespaces in the group name section of the ruleset. Thanks to Kevin Branch (@branchnetconsulting). ([#667](https://github.com/wazuh/wazuh-ruleset/pull/667))
+- Remove invalid zeroes from rules id. Thanks to @lucanus81. ([#691](https://github.com/wazuh/wazuh-ruleset/pull/691))
 
 
 ## [v3.12.1]
@@ -135,7 +183,6 @@ All notable changes to this project will be documented in this file.
 - Changed the eventchannel field names in rules. ([#299](https://github.com/wazuh/wazuh-ruleset/pull/299))
 - Redistribute the eventchannel rules by incoming channel. ([#325](https://github.com/wazuh/wazuh-ruleset/pull/325))
 - Prevent events invoked by AWS Internal from flooding alerts. ([#351](https://github.com/wazuh/wazuh-ruleset/pull/351))
-
 ### Fixed
 
 - Fixed the bruteforce attack rules for Windows Eventchannel. ([#302](https://github.com/wazuh/wazuh-ruleset/pull/302))
